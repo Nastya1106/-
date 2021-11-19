@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "фотостудия", "фотостудия.csproj", "{5E5ED764-18AF-4FB4-90DB-859CBB48F203}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoStudio", "PhotoStudio.csproj", "{5E5ED764-18AF-4FB4-90DB-859CBB48F203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoStudioLibrary", "..\PhotoStudioLibrary\PhotoStudioLibrary.csproj", "{677AAB0A-36E6-43C3-98F1-52BBDB1B2F59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5E5ED764-18AF-4FB4-90DB-859CBB48F203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E5ED764-18AF-4FB4-90DB-859CBB48F203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E5ED764-18AF-4FB4-90DB-859CBB48F203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{677AAB0A-36E6-43C3-98F1-52BBDB1B2F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677AAB0A-36E6-43C3-98F1-52BBDB1B2F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677AAB0A-36E6-43C3-98F1-52BBDB1B2F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{677AAB0A-36E6-43C3-98F1-52BBDB1B2F59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
