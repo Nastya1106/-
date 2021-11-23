@@ -16,5 +16,10 @@ namespace фотостудия.Forms
         {
             InitializeComponent();
         }
-    }
+
+		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+		{
+            LoginForm.Login2.Close();
+		}
+	}
 }

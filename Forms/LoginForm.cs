@@ -1,29 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using фотостудия.Forms;
 
 namespace фотостудия
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public static LoginForm Login2 { get; set; } // свойство
+        private List<Login> logins;
+
+        public LoginForm()
         {
             InitializeComponent();
-            List<Login> logins = new List<Login>();
-            Login log1 = new Login("Admin", "1111111");
+            logins = new List<Login>();
+            Login log1 = new Login("Admin", "111111");
             logins.Add(log1);
+            Login2 = this; // текущий класс
         }
 
-
-      
         public class DataBase {  
             
             private SqlConnection connection;
@@ -42,7 +38,7 @@ namespace фотостудия
 
             private void FindClientByName()
             {
-               /*  foreach (Login log in login)
+                /*foreach (Login log in login)
                 {
                     if (log.name == textBox1.Text)
                     {
@@ -61,7 +57,7 @@ namespace фотостудия
                 }
             }
 
-            public void Connect(Form form)
+           /* public void Connect(Form form)
             {
                 form.FormClosing += Disconnect;
                 connection = new SqlConnection("Data Sourse=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\фотостудия\\PhotoStudio.mdf;Integrated Security=True");
@@ -89,7 +85,7 @@ namespace фотостудия
             private void Disconnect(object sender, FormClosingEventArgs e)
             {
                 connection.Close();
-            }
+            }*/
 
         }
 
@@ -110,16 +106,16 @@ namespace фотостудия
 
             }
 
-        public void Account(string name,string password)
+       /* public void Account(string name,string password)
             {
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\фотостудия\\Accounts.mdf;Integrated Security=True";
                 conn.Open();
 
 
-            }
+            }*/
 
-        public bool LoginUser(string name, string password)
+       /* public bool LoginUser(string name, string password)
             {
                 if (name.Length < 1 || password.Length < 1)
                     return false;
@@ -129,7 +125,16 @@ namespace фотостудия
                 conn.Open();
                 conn.Close();
                 return true;
-            }
+            }*/
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+            MainForm mf = new MainForm();
+            mf.Show();
+            Hide();
+            Console.WriteLine($"{logins[0].name} {logins[0].password}");
+		}
+        
+	}
 }
