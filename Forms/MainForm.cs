@@ -21,5 +21,5 @@ namespace фотостудия.Forms
 		{
             LoginForm.Login2.Close();
 		}
-	}
+    }
 }

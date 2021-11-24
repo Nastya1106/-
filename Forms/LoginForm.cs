@@ -5,90 +5,33 @@ using System.Data.SqlClient;
 using фотостудия.Forms;
 
 namespace фотостудия
-{
+{   
     public partial class LoginForm : Form
     {
         public static LoginForm Login2 { get; set; } // свойство
         private List<Login> logins;
+        private DataBase _db;
 
         public LoginForm()
         {
             InitializeComponent();
             logins = new List<Login>();
             Login log1 = new Login("Admin", "111111");
+
             logins.Add(log1);
             Login2 = this; // текущий класс
+            _db = new DataBase();
         }
 
-        public class DataBase {  
-            
-            private SqlConnection connection;
-
-
-            private void Form1_Load(object sender, EventArgs e)
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-
+                //_db.FindClientByName();
+                textBox2.Focus(); //переход (типо как табуляции)
+                //button1_Click(sender, e);
             }
-
-
-            private void button1_Click(object sender, EventArgs e)
-            {
-                FindClientByName();
-            }
-
-            private void FindClientByName()
-            {
-                /*foreach (Login log in login)
-                {
-                    if (log.name == textBox1.Text)
-                    {
-                        login.Text = "Вошел";
-                        return;
-                    }
-                }
-                login.Text = "Нет такого";*/
-            }
-
-            private void textBox1_KeyUp(object sender, KeyEventArgs e)
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    FindClientByName();
-                }
-            }
-
-           /* public void Connect(Form form)
-            {
-                form.FormClosing += Disconnect;
-                connection = new SqlConnection("Data Sourse=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\фотостудия\\PhotoStudio.mdf;Integrated Security=True");
-                if (IsAvailable())
-                {
-                    connection.Open();
-                }
-            }
-            private bool IsAvailable()
-            {
-                try
-                {
-                    connection.Open();
-                    connection.Close();
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-
-                return true;
-            }
-
-            private void Disconnect(object sender, FormClosingEventArgs e)
-            {
-                connection.Close();
-            }*/
-
         }
-
 
         public class Login
         {
@@ -113,9 +56,9 @@ namespace фотостудия
                 conn.Open();
 
 
-            }*/
+            }
 
-       /* public bool LoginUser(string name, string password)
+        public bool LoginUser(string name, string password)
             {
                 if (name.Length < 1 || password.Length < 1)
                     return false;
@@ -135,6 +78,19 @@ namespace фотостудия
             Hide();
             Console.WriteLine($"{logins[0].name} {logins[0].password}");
 		}
-        
-	}
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            textBox1.Focus();
+        }
+
+        private void textBox2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                _db.FindClientByName();
+                button1_Click(sender, e);
+            }
+        }
+    }
 }
