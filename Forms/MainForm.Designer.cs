@@ -34,9 +34,9 @@ namespace фотостудия.Forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 289);
+            this.button1.Location = new System.Drawing.Point(12, 297);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 35);
+            this.button1.Size = new System.Drawing.Size(132, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "Вернуться обратно";
             this.button1.UseVisualStyleBackColor = true;
