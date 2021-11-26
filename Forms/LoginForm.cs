@@ -49,7 +49,8 @@ namespace фотостудия
 
             }
 
-       /* public void Account(string name,string password)
+            // изменение 
+        public void Account(string name,string password)
             {
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\фотостудия\\Accounts.mdf;Integrated Security=True";
@@ -68,7 +69,7 @@ namespace фотостудия
                 conn.Open();
                 conn.Close();
                 return true;
-            }*/
+            }
         }
 
 		private void button1_Click(object sender, EventArgs e)
