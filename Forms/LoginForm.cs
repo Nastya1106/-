@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using фотостудия.Forms;
+using System.Drawing;
 
 namespace фотостудия
 {   
@@ -94,5 +95,9 @@ namespace фотостудия
             }
         }
 
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            button1.BackColor = Color.Blue;
+        }
     }
 }
