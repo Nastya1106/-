@@ -12,9 +12,13 @@ namespace фотостудия.Forms
 {
     public partial class MainForm : Form
     {
+        public Form form { get; set; }
+            
+
         public MainForm()
         {
             InitializeComponent();
+            form = this;
         }
 
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -28,5 +32,7 @@ namespace фотостудия.Forms
             lg.Show();
             Hide();
         }
+       // private void MainForm_Login();
+ 
     }
 }

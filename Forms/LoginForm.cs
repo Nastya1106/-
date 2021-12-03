@@ -34,6 +34,19 @@ namespace фотостудия
             }
         }
 
+      /*  private void FindLogin()
+        {
+            foreach (Login c in logins)
+            {
+                if (c.name == textBox1.Text & c.password)
+                {
+                    label1.Text = "Найдено";
+                    return;
+                }
+            }
+            label1.Text = "Не найдено";
+        }*/
+
         public class Login
         {
             public string name;
@@ -77,8 +90,19 @@ namespace фотостудия
 		{
             MainForm mf = new MainForm();
             mf.Show();
+
+            if (logins[0].name == "Admin" && logins[0].password == "111111")
+            {
+                mf.label1.Text = "Вошёл";
+            }
+            else
+            {
+                mf.label1.Text = "Не вошёл";
+            }
+
             Hide();
-            Console.WriteLine($"{logins[0].name} {logins[0].password}");
+
+          //  Console.WriteLine($"{logins[0].name} {logins[0].password}");
 		}
 
         private void LoginForm_Load(object sender, EventArgs e)
