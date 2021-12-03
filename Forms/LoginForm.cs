@@ -93,5 +93,6 @@ namespace фотостудия
                 button1_Click(sender, e);
             }
         }
+
     }
 }
