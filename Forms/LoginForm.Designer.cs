@@ -38,12 +38,13 @@ namespace фотостудия
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.Location = new System.Drawing.Point(99, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
             // 
