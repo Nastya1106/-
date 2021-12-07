@@ -10,8 +10,8 @@ namespace фотостудия
     public partial class LoginForm : Form
     {
         public static LoginForm Login2 { get; set; } // свойство
-        private List<Login> logins;
-        private DataBase _db;
+        private readonly List<Login> logins;
+        private readonly DataBase _db;
 
         public LoginForm()
         {
@@ -24,7 +24,7 @@ namespace фотостудия
             _db = new DataBase();
         }
 
-        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        private void TextBox1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -34,11 +34,11 @@ namespace фотостудия
             }
         }
 
-      /*  private void FindLogin()
+     /*   private void FindLogin()
         {
             foreach (Login c in logins)
             {
-                if (c.name == textBox1.Text & c.password)
+                if (c.name == textBox1.Text)
                 {
                     label1.Text = "Найдено";
                     return;
@@ -64,7 +64,7 @@ namespace фотостудия
             }
 
             // изменение 
-        public void Account(string name,string password)
+      /*  public void Account(string name,string password)
             {
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\фотостудия\\Accounts.mdf;Integrated Security=True";
@@ -73,7 +73,7 @@ namespace фотостудия
 
             }
 
-        public bool LoginUser(string name, string password)
+       public bool LoginUser(string name, string password)
             {
                 if (name.Length < 1 || password.Length < 1)
                     return false;
@@ -83,7 +83,7 @@ namespace фотостудия
                 conn.Open();
                 conn.Close();
                 return true;
-            }
+            }*/
         }
 
 		private void button1_Click(object sender, EventArgs e)
@@ -102,15 +102,16 @@ namespace фотостудия
 
             Hide();
 
-          //  Console.WriteLine($"{logins[0].name} {logins[0].password}");
+            Console.WriteLine($"{logins[0].name} {logins[0].password}");
 		}
+
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
             textBox1.Focus();
         }
 
-        private void textBox2_KeyUp(object sender, KeyEventArgs e)
+        private void TextBox2_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

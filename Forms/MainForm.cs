@@ -24,6 +24,7 @@ namespace фотостудия.Forms
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
             LoginForm.Login2.Close();
+
 		}
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,7 +33,9 @@ namespace фотостудия.Forms
             lg.Show();
             Hide();
         }
-       // private void MainForm_Login();
+
  
+        // private void MainForm_Login();
+
     }
 }
