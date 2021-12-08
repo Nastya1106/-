@@ -13,7 +13,6 @@ namespace фотостудия.Forms
     public partial class MainForm : Form
     {
         public Form form { get; set; }
-            
 
         public MainForm()
         {
@@ -21,20 +20,23 @@ namespace фотостудия.Forms
             form = this;
         }
 
-		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-		{
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
             LoginForm.Login2.Close();
 
-		}
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
-        {
+		{
             LoginForm lg = new LoginForm();
             lg.Show();
             Hide();
         }
 
-        // private void MainForm_Login();
 
-    }
+
+		// private void MainForm_Login();
+
+	}
 }

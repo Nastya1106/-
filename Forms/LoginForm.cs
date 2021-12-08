@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using фотостудия.Forms;
 using System.Drawing;
+using System.Threading;
 
 namespace фотостудия
 {   
@@ -34,18 +35,18 @@ namespace фотостудия
             }
         }
 
-     /*   private void FindLogin()
-        {
-            foreach (Login c in logins)
-            {
-                if (c.name == textBox1.Text)
-                {
-                    label1.Text = "Найдено";
-                    return;
-                }
-            }
-            label1.Text = "Не найдено";
-        }*/
+        /*   private void FindLogin()
+           {
+               foreach (Login c in logins)
+               {
+                   if (c.name == textBox1.Text)
+                   {
+                       label1.Text = "Найдено";
+                       return;
+                   }
+               }
+               label1.Text = "Не найдено";
+           }*/
 
         public class Login
         {
@@ -88,20 +89,29 @@ namespace фотостудия
     
 		private void button1_Click(object sender, EventArgs e)
 		{
-            MainForm mf = new MainForm();
-            mf.Show();
+            
 
-            if (logins[0].name == "Admin" && logins[0].password == "111111")
+            if (textBox1.Text == logins[0].name && textBox2.Text == logins[0].password)
             {
+                MainForm mf = new MainForm();
+                mf.Show();
+
                 mf.label1.Text = "Вошёл";
+            //    mf.label2.Text = "Найден";
             }
             else
             {
-                mf.label1.Text = "Не вошёл";
+                button1.Focus();
+                MessageBox.Show("Вы ввели неправильные логин или пароль", "Неверные логин или пароль", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Focus();
+                return;
+
+				/*mf.label1.Text = "Не вошёл";
+                mf.label2.Text = "Нет такого";*/
             }
 
-				Hide();
-
+            Hide();
+         
             Console.WriteLine($"{logins[0].name} {logins[0].password}");
 		}
 
@@ -120,9 +130,9 @@ namespace фотостудия
             }
         }
 
-        private void button1_MouseDown(object sender, MouseEventArgs e)
+        /*private void button1_MouseDown(object sender, MouseEventArgs e)
         {
             button1.BackColor = Color.Blue;
-        }
+        }*/
     }
 }
