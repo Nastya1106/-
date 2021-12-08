@@ -34,7 +34,6 @@ namespace фотостудия.Forms
             Hide();
         }
 
- 
         // private void MainForm_Login();
 
     }

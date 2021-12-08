@@ -64,7 +64,7 @@ namespace фотостудия
             }
 
             // изменение 
-      /*  public void Account(string name,string password)
+        public void Account(string name,string password)
             {
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\фотостудия\\Accounts.mdf;Integrated Security=True";
@@ -85,7 +85,7 @@ namespace фотостудия
                 return true;
             }*/
         }
-
+    
 		private void button1_Click(object sender, EventArgs e)
 		{
             MainForm mf = new MainForm();
@@ -100,7 +100,7 @@ namespace фотостудия
                 mf.label1.Text = "Не вошёл";
             }
 
-            Hide();
+				Hide();
 
             Console.WriteLine($"{logins[0].name} {logins[0].password}");
 		}
