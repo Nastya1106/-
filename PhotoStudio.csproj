@@ -65,7 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataBase.cs" />
     <Compile Include="DataBase\DB.cs" />
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
