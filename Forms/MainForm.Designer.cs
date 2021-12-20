@@ -33,11 +33,11 @@ namespace фотостудия.Forms
 			this.button2 = new System.Windows.Forms.Button();
 			this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
+			this.button3 = new System.Windows.Forms.Button();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.button4 = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
@@ -50,6 +50,7 @@ namespace фотостудия.Forms
 			this.button1.TabIndex = 0;
 			this.button1.Text = "Выход";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click_1);
 			// 
 			// button2
 			// 
@@ -78,6 +79,23 @@ namespace фотостудия.Forms
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Официальные мероприятия";
 			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(6, 20);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(188, 174);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "Какой-то текст";
+			// 
+			// button3
+			// 
+			this.button3.Location = new System.Drawing.Point(6, 197);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(188, 23);
+			this.button3.TabIndex = 0;
+			this.button3.Text = "Перейти";
+			this.button3.UseVisualStyleBackColor = true;
+			// 
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.label2);
@@ -89,14 +107,13 @@ namespace фотостудия.Forms
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Частные заказы";
 			// 
-			// button3
+			// label2
 			// 
-			this.button3.Location = new System.Drawing.Point(6, 197);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(188, 23);
-			this.button3.TabIndex = 0;
-			this.button3.Text = "Перейти";
-			this.button3.UseVisualStyleBackColor = true;
+			this.label2.Location = new System.Drawing.Point(7, 20);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(187, 174);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Какой-то текст";
 			// 
 			// button4
 			// 
@@ -106,22 +123,6 @@ namespace фотостудия.Forms
 			this.button4.TabIndex = 0;
 			this.button4.Text = "Перейти";
 			this.button4.UseVisualStyleBackColor = true;
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(6, 20);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(188, 174);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "Какой-то текст";
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(7, 20);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(187, 174);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Какой-то текст";
 			// 
 			// MainForm
 			// 

@@ -29,15 +29,20 @@ namespace фотостудия.Forms
 
         private void button1_Click(object sender, EventArgs e)
 		{
-            LoginForm lg = new LoginForm();
-            lg.Show();
-            Hide();
+         
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
         }
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+           LoginForm lg = new LoginForm();
+           lg.Show();
+           Hide();
+		}
 
 
 
