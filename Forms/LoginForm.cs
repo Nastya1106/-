@@ -38,7 +38,7 @@ namespace фотостудия
 		{
 
 #if !DEBUG // игнорирование конфигурации во время debuga
-            if(!Login()) 
+            if(!Login())
                 return;
 #endif
 			MainForm mf = new MainForm();
@@ -91,5 +91,10 @@ namespace фотостудия
                 button1_Click(sender, e);
             }
         }
-    }
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

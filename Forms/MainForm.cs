@@ -34,6 +34,11 @@ namespace фотостудия.Forms
             Hide();
         }
 
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
 
 
 		// private void MainForm_Login();
