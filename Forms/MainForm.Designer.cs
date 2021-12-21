@@ -29,16 +29,19 @@ namespace фотостудия.Forms
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.button3 = new System.Windows.Forms.Button();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button4 = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -70,6 +73,7 @@ namespace фотостудия.Forms
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.pictureBox1);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.button3);
 			this.groupBox1.Location = new System.Drawing.Point(194, 18);
@@ -78,6 +82,15 @@ namespace фотостудия.Forms
 			this.groupBox1.TabIndex = 3;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Официальные мероприятия";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(6, 42);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(188, 149);
+			this.pictureBox1.TabIndex = 2;
+			this.pictureBox1.TabStop = false;
 			// 
 			// label1
 			// 
@@ -138,6 +151,7 @@ namespace фотостудия.Forms
 			this.Text = "Фотостудия PhotoMaster";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.groupBox1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.groupBox2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -154,5 +168,6 @@ namespace фотостудия.Forms
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }

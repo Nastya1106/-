@@ -11,47 +11,63 @@ namespace фотостудия.DataBase
 {
 	public class DB
 	{
-		private MySqlConnection _connection;
+		//private MySqlConnection _connection;
 
-		public bool Connect(string database)
+		//public bool Connect(string database)
+		//{
+		//	_connection = new MySqlConnection($"server=localhost;port=3306;username=root;password=root;database={database}");
+
+		//	if(_connection.State == ConnectionState.Closed)
+		//	{
+		//		try 
+		//		{
+		//			_connection.Open();
+		//		}
+		//		catch (MySqlException)
+		//		{
+		//			MessageBox.Show("Невозможно подключиться к базе данных, так как произошло отключение сервера", "Ошибка - отключился сервер", MessageBoxButtons.OK, MessageBoxIcon.Error) ;
+		//			return false;
+		//		}
+		//	}
+		//	return true;
+		//}
+		//public void Disconnect()
+		//{
+		//	if (_connection.State == ConnectionState.Open)
+		//		_connection.Close();
+		//}
+
+		//public void Execute(MySqlCommand c)
+		//{
+		//	c.Connection = _connection;
+		//	c.ExecuteNonQuery();
+		//}
+
+		//public DataTable Select(MySqlCommand c)
+		//{
+		//	c.Connection = _connection;
+		//	DataTable dt = new DataTable();
+		//	MySqlDataAdapter msda = new MySqlDataAdapter();
+		//	msda.SelectCommand = c;
+		//	msda.Fill(dt);
+		//	return dt;
+
+		//}
+		MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;user=root;password=root;database=photostudio");
+
+		public void OpenConnect()
 		{
-			_connection = new MySqlConnection($"server=localhost;port=3306;username=root;password=root;database={database}");
-
-			if(_connection.State == ConnectionState.Closed)
-			{
-				try 
-				{
-					_connection.Open();
-				}
-				catch (MySqlException)
-				{
-					MessageBox.Show("Невозможно подключиться к базе данных, так как произошло отключение сервера", "Ошибка - отключился сервер", MessageBoxButtons.OK, MessageBoxIcon.Error) ;
-					return false;
-				}
-			}
-			return true;
+			if (connection.State == System.Data.ConnectionState.Closed)
+				connection.Open();
 		}
-		public void Disconnect()
+		public void CloseConnect()
 		{
-			if (_connection.State == ConnectionState.Open)
-				_connection.Close();
+			if (connection.State == System.Data.ConnectionState.Open)
+				connection.Close();
 		}
-
-		public void Execute(MySqlCommand c)
+		public MySqlConnection getConnection()
 		{
-			c.Connection = _connection;
-			c.ExecuteNonQuery();
-		}
-
-		public DataTable Select(MySqlCommand c)
-		{
-			c.Connection = _connection;
-			DataTable dt = new DataTable();
-			MySqlDataAdapter msda = new MySqlDataAdapter();
-			msda.SelectCommand = c;
-			msda.Fill(dt);
-			return dt;
-
+			return connection;
 		}
 	}
 }

@@ -47,37 +47,37 @@ namespace фотостудия
 
         }
 
-        private bool Login()
-		{
-			фотостудия.DataBase.DB db = new фотостудия.DataBase.DB();
-            if (!db.Connect("photostudio"))
-                return false;
+  //      private bool Login()
+		//{
+		//	фотостудия.DataBase.DB db = new фотостудия.DataBase.DB();
+  //          if (!db.Connect("photostudio"))
+  //              return false;
 
-            MySqlCommand c = new MySqlCommand("SELECT * FROM `users` WHERE `username` = @username AND `password` = @password");
-            c.Parameters.Add("@username", MySqlDbType.VarChar).Value=Encode(textBox1.Text);
-            c.Parameters.Add("@password", MySqlDbType.VarChar).Value = Encode(textBox2.Text);
-            var table = db.Select(c);
+  //          MySqlCommand c = new MySqlCommand("SELECT * FROM `users` WHERE `username` = @username AND `password` = @password");
+  //          c.Parameters.Add("@username", MySqlDbType.VarChar).Value=Encode(textBox1.Text);
+  //          c.Parameters.Add("@password", MySqlDbType.VarChar).Value = Encode(textBox2.Text);
+  //          var table = db.Select(c);
 
-            if (table.Rows.Count > 0)
-                return true;
-            else
-			{
-                MessageBox.Show("Вы ввели неправильный логин или пароль", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-			}
-        }
+  //          if (table.Rows.Count > 0)
+  //              return true;
+  //          else
+		//	{
+  //              MessageBox.Show("Вы ввели неправильный логин или пароль", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+  //              return false;
+		//	}
+  //      }
 
-        private string Encode(string original)
-		{
-            using (SHA256 hash = SHA256.Create())
-			{
-                byte[] bytes = hash.ComputeHash(Encoding.UTF8.GetBytes(original));
-                StringBuilder sb = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
-                    sb.Append(bytes[i].ToString("x2"));
-                return sb.ToString();
-			} 
-		}
+  ////      private string Encode(string original)
+		//{
+  //          using (SHA256 hash = SHA256.Create())
+		//	{
+  //              byte[] bytes = hash.ComputeHash(Encoding.UTF8.GetBytes(original));
+  //              StringBuilder sb = new StringBuilder();
+  //              for (int i = 0; i < bytes.Length; i++)
+  //                  sb.Append(bytes[i].ToString("x2"));
+  //              return sb.ToString();
+		//	} 
+		//}
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
