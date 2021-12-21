@@ -29,7 +29,9 @@ namespace фотостудия
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBox2.Focus(); //переход (типо как табуляции)
+                textBox2.Focus();
+                
+                //переход (типо как табуляции)
 
             }
         }
@@ -41,9 +43,10 @@ namespace фотостудия
             if(!Login())
                 return;
 #endif
-			MainForm mf = new MainForm();
+			MainForm mf = new ();
             mf.Show();
             Hide();
+
 
         }
 
@@ -94,7 +97,7 @@ namespace фотостудия
 
 		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-            Registration lg = new Registration();
+			MainForm lg = new Registration();
             lg.Show();
             Hide();
         }

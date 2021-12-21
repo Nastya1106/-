@@ -12,9 +12,9 @@ using фотостудия.DataBase;
 
 namespace фотостудия.Forms
 {
-	public partial class Registration : Form
+	public partial class MainForm : Form
 	{
-		public Registration()
+		public MainForm()
 		{
 			InitializeComponent();
 		}

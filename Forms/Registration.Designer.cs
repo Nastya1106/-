@@ -1,7 +1,7 @@
 ﻿
 namespace фотостудия.Forms
 {
-	partial class Registration
+	partial class MainForm
 	{
 		/// <summary>
 		/// Required designer variable.
