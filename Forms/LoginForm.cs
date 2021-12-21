@@ -92,9 +92,11 @@ namespace фотостудия
             }
         }
 
-		private void label2_Click(object sender, EventArgs e)
+		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-
-		}
+            Registration lg = new Registration();
+            lg.Show();
+            Hide();
+        }
 	}
 }
